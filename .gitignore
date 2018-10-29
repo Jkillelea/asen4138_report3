@@ -1,0 +1,12 @@
+Makefile
+.main.tex.swp
+main.aux
+main.log
+main.out
+main.lof
+main.loc
+main.lot
+main.toc
+main.pdf
+main.tex.bak
+
