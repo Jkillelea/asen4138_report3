@@ -209,19 +209,69 @@ This group selected a conventional tail layout in the interest of simplicity and
 %Include AAA printouts of volume coefficient calculations in the appendix and a drawing of the horizontal stabilizer and/or canard in the chapter itself
 %Perform a critical Mach number check for each, if applicable. Mcr plots are found in Canvas. Show where your point lies on the plot
 
-The horizontal stabilizer was designed principally for ensuring that the horizontal tail volume coefficient, $V_h$, lay between 0.7 and 1.1, as seen in \cite{orange_book}, as well as keeping the static margin, fuselage length, and horizontal tail area to reasonable limits. This effort was only a partial success, as a suitable static margin has not yet been found. 
+The horizontal stabilizer was designed principally for ensuring that the 
+horizontal tail volume coefficient, $V_h$, lay between 0.7 and 1.1, as seen 
+in \cite{orange_book}, as well as keeping the static margin, fuselage length, 
+and horizontal tail area to reasonable limits. This effort was only a 
+partial success, as while $V_h$ was eventually tuned to be around 0.8, a 
+suitable static margin has not yet been found. 
 
-% TODO: what is capital lambda?
+The surface area of the horizontal tail is 190 square feet with an apect 
+ratio of 7. It is 36.47 feet in span, with a taper ratio, $\lambda$, of 1. 
+For simplicity, it has no dihedral, and no sweep. Although this group 
+neglected to actually input a control surface airfoil into AAA, the airfoil 
+selected for the tail is a NACA 0012 for its simple construction and 
+symmetrical aerodynamic properties which allow it to be used for both 
+horizontal and vertical control surfaces.
 
-The surface area of the horizontal tail is TBD feet. It is TBD feet in span, with a taper ratio, $\lambda$, of TBD. For simplicity, it has no dihedral. The airfoil selected for the tail is a NACA 0012 for its simple construction.
+By inspecting figure \ref{fig:critical_mach_check}, the cruise speed of 
+$M-0.6$ is too low for any shock formation. If cruise speed was higher, 
+then a thinner control surface airfoil might be required. However, in this 
+case the thickness of the horizontal stabilizer could safely be increased to 
+just about any reasonable amount without worrying about the formation of shocks.
 
-By inspecting figure \ref{fig:critical_mach_check}, the cruise speed of $M-0.6$ is too low for any shock formation. If cruise speed was higher, then a thinner control surface airfoil might be required. However, in this case the thickness of the horizontal stabilizer could safely be increased to just about any reasonable amount without worrying about the formation of shocks.
+The end results are shown below, in table 
+\ref{tab:horizontal_stabilizer_size}. They are derived from the sizing 
+charts in AAA, shown in figures \ref{fig:horizontal_volumeratio} and 
+\ref{fig:horizontal_geometry}. Note that beccause $\lambda_h = 1$,
+$c_{r_h} = c_{t_h}$.
+
+\begin{table}[H]
+\centering
+\caption{Horizontal stabilizer dimensions}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}\hline
+    $AR_h$ & $S_h$ $[ft^2]$ & $b_h$ $[ft]$ & $\lambda_h$ & $\Lambda_{c\4_{h}}$ $[^\circ]$ & $X_{apex_h}$ $[ft]$ & $\bar{c}_h$ $[ft]$ & $V_h$  \\ \hline
+    7.0    & 190.0          & 36.47        & 1.0         & 0.0                            & 61.30               & 5.21               & 0.8104 \\ \hline
+\end{tabular}
+\label{tab:horizontal_stabilizer_size}
+\end{table}
+
 
 \subsection{Sizing the Vertical Stabilizer}
-%Discuss the location and design of the vertical stabilizer. Need to include: S, b, AR, Gamma c/4, lambda, t/c, and airfoil selected. Calculate and compare values of Vv to those of similar aircraft.
-%Include AAA printouts of volume coefficient calculations in the appendix and a drawing of the vertical stabilizer in the chapter itself
-%Perform a Mach critical check, if applicable. Again Mcr plots are found in Canvas. Show where your point lies on the plot
-%Go to the stability and control module and calculate the static margin, setting eta hp,off =1. This will give you the static margin of your airplane, which is listed as the output parameter, SM. Comment on the results - is your airplane likely to be longitudinally stable? Unstable? If changes need to be made to either the CG (due to weight and balance) and/or the AC (due to wing/tail location), now is the time to make changes.
+% Discuss the location and design of the vertical stabilizer. Need to include: 
+% S, b, AR, Gamma c/4, lambda, t/c, and airfoil selected. Calculate and compare 
+% values of Vv to those of similar aircraft. Include AAA printouts of volume 
+% coefficient calculations in the appendix and a drawing of the vertical 
+% stabilizer in the chapter itself Perform a Mach critical check, if applicable. 
+% Again Mcr plots are found in Canvas. Show where your point lies on the plot 
+% Go to the stability and control module and calculate the static margin, 
+% setting eta hp,off =1. This will give you the static margin of your airplane, 
+% which is listed as the output parameter, SM. Comment on the results - is your 
+% airplane likely to be longitudinally stable? Unstable? If changes need to be 
+% made to either the CG (due to weight and balance) and/or the AC (due to 
+% wing/tail location), now is the time to make changes.
+
+Like the horizontal stabilizer, vertical stabilizer sizing and placement was driven primarily by the vertical tail volume ratio, $V_v$. In table 8.6b of \cite{orange_book}, all the volume ratios are between 0.065 and 0.120. A volume ratio of 0.0774 was eventually settled on, with the rest of the paramters in table \ref{tab:vertical_stabilizer_size} balanced between placement on the aircraft and control surface size.
+
+\begin{table}[H]
+\centering
+\caption{Vertical stabilizer dimensions}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}\hline
+    $AR_v$ & $S_v$ $[ft^2]$ & $b_v$ $[ft]$ & $\lambda_v$ & $\Lambda_{c\4_{v}}$ $[^\circ]$ & $X_{apex_v}$ $[ft]$ & $\bar{c}_v$ $[ft]$ & $c_{r_v}$ $[ft]$ & $c_{t_v}$ $[ft]$ & $V_v$  \\ \hline
+    3.0 & 137.0 & 20.27 & 0.80 & 5.0  & 60.00 & 6.79 & 7.51 & 6.01 & 0.0774 \\ \hline
+\end{tabular}
+\label{tab:vertical_stabilizer_size}
+\end{table}
 
 \section{Control Surface Layout Design}
 \subsection{Sizing the Lateral Control Surfaces}
@@ -265,6 +315,8 @@ By inspecting figure \ref{fig:critical_mach_check}, the cruise speed of $M-0.6$ 
 % Todo: orange book charts for Vh and Vv
 
 \bibitem{pres13} Gerren, "Presentation 13", \url{https://canvas.colorado.edu}
+
+\bibitem{orange_book} Gerren, "Tail and Control Surface Info", \url{https://canvas.colorado.edu}
 
 \end{thebibliography}
 
@@ -378,8 +430,8 @@ By inspecting figure \ref{fig:critical_mach_check}, the cruise speed of $M-0.6$ 
 
 \begin{figure}[H]
     \includegraphics[width=\textwidth]{plots/Mcr_check.png}
-    \label{fig:critical_mach_check}
     \caption{Critical Mach number checks for shockwave formation on an airfoil}
+    \label{fig:critical_mach_check}
 \end{figure}
 
 \begin{figure}[H]
