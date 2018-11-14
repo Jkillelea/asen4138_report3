@@ -80,8 +80,62 @@ $\Gamma_W$	               & Dihedral                           \\
 %Define/show axis system
 
 % Explain the empty weight breakdown of your aircraft, including individual 
+\begin{table}
+\label{tab:Empty Weight}
+\caption{Empty weight breakdown of the Sea Lion.}
+\begin{tabular}{|c|c|c|c|c|c|c|}\hline
+Fuselage & Wing & Empennage & Landing Gear & Nacelle & Powerplant & Fixed Equipment \\ \hline
+4455.5 & 3386.2 & 712.9 & 1639.6 & 855.5 & 5596.2 & 5275.4 \\ \hline
+\end{tabular}
+\end{table}
 % tables with structural, powerplant, and fixed equipment weight breakdowns 
+\begin{table}
+\label{tab:Structural Weight}
+\caption{Structural weight breakdown.}
+\begin{tabular}{|c|c|c|c|c|c|}
+Wing & Fuselage & Horizontal Tail & Vertical Tail & Nose Gear & Main Gear \\ \hline
+3386.2 & 4455.6 & 445.6 & 267.3 & 245.9 & 1399.7 \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}
+\label{tab:Powerplant Weight}
+\caption{Powerplant weight breakdown.}
+\begin{tabular}{|c|c|c|c|}
+Engine 1 & Engine 2 & Propeller 1 & Propeller 2 \\ \hline
+1896.3 & 1896.3 & 901.8 & 901.8 \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}
+\label{tab:Fixed Equipment Weight}
+\caption{Fixed equipment }
+\end{table}
 % and the x-,y-, and z-cg locations of the various weight components. You can 
+\begin{table}
+\label{tab:Structural cg}
+\caption{Structural $c_g$ breakdown.}
+\begin{tabular}{|c|c|c|c|}
+	& $x_{cg}$ [ft] & $y_{cg}$ [ft] & $z_{cg}$ [ft] \\ \hline
+Wing & 23 & 0 & 2\\ \hline
+Fuselage & 21.41 & 0 & 3.5\\ \hline
+Horizontal Tail & 62 & 0 & 6\\ \hline
+Vertical Tail & 62	& 0 & 16\\ \hline
+Nose Gear & 8 & 0 & 0.98\\ \hline
+Main Gear & 30 & 0 & 2.38\\ \hline 
+\end{tabular}
+\end{table}
+
+\begin{table}
+\label{tab:Powerplant cg}
+\caption{Powerplant $c_g$ breakdown.}
+\begin{tabular}{|c|c|c|c|}\hline
+Engine 1 & 23 & 9 & 3\\ \hline
+Engine 2 & 23 & -9 & 3\\ \hline
+Propeller 1 & 20 & 9 & 3 \\ \hline
+Propeller 2 & 20 & -9 & 3\\ \hline
+\end{tabular}
+\end{table}
 % "cut and paste" the tables from your AAA printouts if they are presented in 
 % the text as numbered, titled tables. You don't need to repeat them in your 
 % appendix Since the engine weigh 1500 lbs each and our initial weight budget 
@@ -191,221 +245,216 @@ By inspecting figure \ref{fig:critical_mach_check}, we see that our cruise speed
 % 8
 \section{Appendix}
 
-\begin{figure}
-    \includegraphics[width=\textwidth]{plots/Mcr_check.png}
-    \label{fig:critical_mach_check}
-    \caption{Critical Mach number checks for shockwave formation on an airfoil}
+\subsection{AAA: Preliminary Weight Analysis}
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{Report3Printouts/Weight/ComponentWeights_cropped.png}
+    \caption{Structural component weight breakdown}
+    \label{fig:componentweights}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{Report3Printouts/Weight/CustomAirplane_cropped.png}
+    \caption{A custom airplane model used for weight allocation in AAA}
+    \label{fig:customairplane}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{Report3Printouts/Weight/PropellerWeight_cropped.png}
+    \caption{Propeller weights estimates}
+    \label{fig:propellerweight}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{Report3Printouts/Weight/WeightFractionsInitial_cropped.png}
+    \caption{Initial structural weight fractions}
+    \label{fig:weightfractionsinitial}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{Report3Printouts/Weight/WeightFractionsFinal_cropped.png}
+    \caption{Finalized structural weight fractions}
+    \label{fig:weightfractionsfinal}
+\end{figure}
+
+\subsection{AAA: Preliminary Balance Analysis}
+
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{Report3Printouts/Cg/Cg_Empty_Detailed_Empty_cropped.png}
     \caption{Detailed breakdown of CG components of the empty aircraft}
     \label{fig:cg_detailed_empty}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{Report3Printouts/Cg/Cg_Empty_Detailed_FixedEquipment_cropped.png}
     \caption{Detailed breakdown of CG and weight of the fixed equipment}
     \label{fig:cg_empty_detailed_fixedequipment}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{Report3Printouts/Cg/Cg_Empty_Detailed_Powerplant_cropped.png}
     \caption{Powerplant CG breakdown}
     \label{fig:cg_empty_detailed_powerplant}
 \end{figure}
 
 
-\begin{figure}
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{Report3Printouts/Cg/Cg_Empty_Detailed_Structure_cropped.png}
     \caption{Structure CG breakdown}
     \label{fig:cg_empty_detailed_structure}
 \end{figure}
 
 
-\begin{figure}
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{Report3Printouts/Cg/Cg_Empty_Fractions_cropped.png}
     \caption{Equipment group CG breakdown}
     \label{fig:cg_empty_fractions}
 \end{figure}
 
 
-\begin{figure}
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{Report3Printouts/Cg/Cg_Excursion_cropped.png}
     \caption{CG excursion ordering}
     \label{fig:cg_excursion}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{Report3Printouts/Cg/Cg_Excursion_Plot_cropped.png}
     \caption{Plot of CG excursion}
     \label{fig:cg_excursion_plot}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{Report3Printouts/Cg/Cg_excursion_plot_mostaft_cropped.png}
     \caption{Plot of CG excursion with most aft point marked}
     \label{fig:cg_excursion_plot_mostaft}
 \end{figure}
 
 
-\begin{figure}
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{Report3Printouts/Cg/Cg_excursion_plot_mostforward_cropped.png}
     \caption{Plot of CG excursion with most forward point marked}
     \label{fig:cg_excursion_plot_mosforward}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{Report3Printouts/Cg/Cg_TotalAircraft_cropped.png}
     \caption{Fully loaded aircraft CG breakdown}
     \label{fig:cg_totalaircraft}
 \end{figure}
 
-\begin{figure}
+\subsection{AAA: Empennage Layout Design}
+
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{Report3Printouts/changedwing.png}
     \caption{Wing layout, with adjusted apex location}
     \label{fig:changedwing}
 \end{figure}
 
-\begin{figure}
-    \includegraphics[width=\textwidth]{Report3Printouts/Empannage/Horizontal_elevator_cropped.png}
-    \caption{Elevator control surface sizing}
-    \label{fig:horizontal_elevator}
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{plots/Mcr_check.png}
+    \label{fig:critical_mach_check}
+    \caption{Critical Mach number checks for shockwave formation on an airfoil}
 \end{figure}
 
-\begin{figure}
-    \includegraphics[width=\textwidth]{Report3Printouts/Empannage/Horizontal_elevator_plot.png}
-    \caption{Elevator and horizontal stabilizer layout}
-    \label{fig:horizontal_elevator_plot}
-\end{figure}
-
-
-\begin{figure}
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{Report3Printouts/Empannage/Horizontal_geometry_cropped.png}
     \caption{Horizontal stabilizer sizing}
     \label{fig:horizontal_geometry}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{Report3Printouts/Empannage/Horizontal_geometry_plot.png}
     \caption{Horizontal stabilizer layout}
     \label{fig:horizontal_geometry_plot}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{Report3Printouts/Empannage/Horizontal_volumeratio_cropped.png}
     \caption{Horizontal tail volume coefficient calculations}
     \label{fig:horizontal_volumeratio}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{Report3Printouts/Empannage/Horizontal_volumeratio_plot.png}
     \caption{Horizontal stabilizer with aerodynamic center shown}
     \label{fig:horizontal_volumeratio_plot}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{Report3Printouts/Empannage/Vertical_geometry_cropped.png}
     \caption{Vertical stabilizer sizing}
     \label{fig:vertical_geometry}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{Report3Printouts/Empannage/Vertical_geometry_plot.png}
     \caption{Vertical stabilizer layout}
     \label{fig:vertical_geometry_plot}
 \end{figure}
 
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{Report3Printouts/Empannage/Vertical_volumeratio_cropped.png}
+    \caption{Vertical stabilizer volume ratio calculation}
+    \label{fig:vertical_volumeratio}
+\end{figure}
 
-\begin{figure}
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{Report3Printouts/Empannage/Vertical_volumeratio_plot.png}
+    \caption{Vertical stabilizer with aerodynamic center shown}
+    \label{fig:vertical_volumeratio_plot}
+\end{figure}
+
+\subsection{AAA: Control Surface Layout Design}
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{Report3Printouts/Empannage/Horizontal_elevator_cropped.png}
+    \caption{Elevator control surface sizing}
+    \label{fig:horizontal_elevator}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{Report3Printouts/Empannage/Horizontal_elevator_plot.png}
+    \caption{Elevator and horizontal stabilizer layout}
+    \label{fig:horizontal_elevator_plot}
+\end{figure}
+
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{Report3Printouts/Empannage/Vertical_rudder_cropped.png}
     \caption{Rudder sizing}
     \label{fig:vertical_rudder}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{Report3Printouts/Empannage/Vertical_rudder_plot.png}
     \caption{Rudder control surface layout}
     \label{fig:vertical_rudder_plot}
 \end{figure}
 
 
-\begin{figure}
-    \includegraphics[width=\textwidth]{Report3Printouts/Empannage/Vertical_volumeratio_cropped.png}
-    \caption{Vertical stabilizer volume ratio calculation}
-    \label{fig:vertical_volumeratio}
-\end{figure}
+\subsection{AAA: Stability Derivatives}
 
-\begin{figure}
-    \includegraphics[width=\textwidth]{Report3Printouts/Empannage/Vertical_volumeratio_plot.png}
-    \caption{Vertical stabilizer with aerodynamic center shown}
-    \label{fig:vertical_volumeratio_plot}
-\end{figure}
-
-
-\begin{figure}
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{Report3Printouts/Stability/CL_alpha.png}
     \caption{Calculations of derivatives of $C_L$}
     \label{fig:cl_alpha}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{Report3Printouts/Stability/CM_alpha.png}
     \caption{Initial static margin calculation}
     \label{fig:cm_alpha}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{Report3Printouts/Stability/CM_alpha_final.png}
     \caption{Revised static margin calculation}
     \label{fig:cm_alpha_final}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{Report3Printouts/Stability/delta_x_ac_f_cropped.png}
     \caption{Change in aerodynamic center due to fuselage influence}
     \label{fig:delta_x_ac_f}
 \end{figure}
-
-\begin{figure}
-    \includegraphics[width=\textwidth]{Report3Printouts/Weight/ComponentWeights_cropped.png}
-    \caption{Structural component weight breakdown}
-    \label{fig:componentweights}
-\end{figure}
-
-\begin{figure}
-    \includegraphics[width=\textwidth]{Report3Printouts/Weight/CustomAirplane_cropped.png}
-    \caption{A custom airplane model used for weight allocation in AAA}
-    \label{fig:customairplane}
-\end{figure}
-
-\begin{figure}
-    \includegraphics[width=\textwidth]{Report3Printouts/Weight/PropellerWeight_cropped.png}
-    \caption{Propeller weights estimates}
-    \label{fig:propellerweight}
-\end{figure}
-
-\begin{figure}
-    \includegraphics[width=\textwidth]{Report3Printouts/Weight/WeightFractionsFinal_cropped.png}
-    \caption{Finalized structural weight fractions}
-    \label{fig:weightfractionsfinal}
-\end{figure}
-
-\begin{figure}
-    \includegraphics[width=\textwidth]{Report3Printouts/Weight/WeightFractionsInitial_cropped.png}
-    \caption{Initial structural weight fractions}
-    \label{fig:weightfractionsinitial}
-\end{figure}
-
-
-\subsection{AAA: Preliminary Weight and Balance Analysis}
-
-\subsection{AAA: Empennage Layout Design}
-
-\subsection{AAA: Control Surface Layout Design}
-
-\subsection{AAA: Landing Gear Layout Design}
-
 
 \end{document}
 
