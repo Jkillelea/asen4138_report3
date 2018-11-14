@@ -241,10 +241,16 @@ $c_{r_h} = c_{t_h}$.
 \caption{Horizontal stabilizer dimensions}
 \begin{tabular}{|c|c|c|c|c|c|c|c|}\hline
     $AR_h$ & $S_h$ $[ft^2]$ & $b_h$ $[ft]$ & $\lambda_h$ & $\Lambda_{c/4_h}$ $[deg]$ & $X_{apex_h}$ $[ft]$ & $\bar{c}_h$ $[ft]$ & $V_h$  \\ \hline
-    7.0    & 190.0          & 36.47        & 1.0         & 0.0                            & 61.30               & 5.21               & 0.8104 \\ \hline
+    7.0 & 190.0 & 36.47 & 1.0 & 0.0 & 61.30 & 5.21 & 0.8104 \\ \hline
 \end{tabular}
 \label{tab:horizontal_stabilizer_size}
 \end{table}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{Report3Printouts/Empannage/Horizontal_geometry_plot.png}
+    \caption{Horizontal stabilizer layout}
+    \label{fig:horizontal_geometry_plot}
+\end{figure}
 
 
 \subsection{Sizing the Vertical Stabilizer}
@@ -261,24 +267,54 @@ $c_{r_h} = c_{t_h}$.
 % made to either the CG (due to weight and balance) and/or the AC (due to 
 % wing/tail location), now is the time to make changes.
 
-Like the horizontal stabilizer, vertical stabilizer sizing and placement was driven primarily by the vertical tail volume ratio, $V_v$. In table 8.6b of \cite{orange_book}, all the volume ratios are between 0.065 and 0.120. A volume ratio of 0.0774 was eventually settled on, with the rest of the paramters in table \ref{tab:vertical_stabilizer_size} balanced between placement on the aircraft and control surface size.
+Like the horizontal stabilizer, vertical stabilizer sizing and placement was driven primarily by the vertical tail volume ratio, $V_v$. In table 8.6b of \cite{orange_book}, all the volume ratios are between 0.065 and 0.120. A volume ratio of 0.0774 was eventually settled on, with the rest of the paramters in table \ref{tab:vertical_stabilizer_size} balanced between placement on the aircraft and control surface size. These results are from figures \ref{fig:vertical_geometry} and \ref{fig:vertical_volumeratio}.
 
 \begin{table}[H]
 \centering
 \caption{Vertical stabilizer dimensions}
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}\hline
-    $AR_v$           & $t/c$                     & $S_v$ $[ft^2]$      & $b_v$ $[ft]$       & 
-    $\lambda_v$      & $\Lambda_{c/4_v}$ $[deg]$ & $X_{apex_v}$ $[ft]$ & $\bar{c}_v$ $[ft]$ & 
-    $c_{r_v}$ $[ft]$ & $c_{t_v}$ $[ft]$          & $V_v$                           \\ \hline
+    $AR_v$ & $t/c$ & $S_v$ $[ft^2]$ & $b_v$ $[ft]$ & $\lambda_v$ & $\Lambda_{c/4_v}$ $[deg]$ & $X_{apex_v}$ $[ft]$ & $\bar{c}_v$ $[ft]$ & $c_{r_v}$ $[ft]$ & $c_{t_v}$ $[ft]$ & $V_v$ \\ \hline
     3.0 & 12\% & 137.0 & 20.27 & 0.80 & 5.0  & 60.00 & 6.79 & 7.51 & 6.01 & 0.0774 \\ \hline
 \end{tabular}
 \label{tab:vertical_stabilizer_size}
 \end{table}
 
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{Report3Printouts/Empannage/Vertical_geometry_plot.png}
+    \caption{Vertical stabilizer layout}
+    \label{fig:vertical_geometry_plot}
+\end{figure}
+
+
 \section{Control Surface Layout Design}
 \subsection{Sizing the Lateral Control Surfaces}
-%Include the AAA printout of aileron calculations in the appendix and a drawing of the wing/aileron in the chapter itself
-%Include ca/cw, eta ai and eta ao dimensions, and show that the ailerons does not interfere with the flap location. Include spoiler sizing data here if spoilers are needed. Include (Sa/Sw) calculated from your AAA values and compare it with similar aircraft. Comment - based on your valued, do you expect problems with sufficient roll authority?
+% Include the AAA printout of aileron calculations in the appendix and a drawing of 
+% the wing/aileron in the chapter itself
+% Include ca/cw, eta ai and eta ao dimensions, and show that the ailerons does not 
+% interfere with the flap location. Include spoiler sizing data here if spoilers are 
+% needed. Include (Sa/Sw) calculated from your AAA values and compare it with similar 
+% aircraft. Comment - based on your valued, do you expect problems with sufficient roll 
+% authority?
+
+The aileron was sized to take up the remaining room on the wing, given the practical constraints that some room should be left between it and the flap for possible hinges and some space should also be left at the wingtip for navigation lights and strobes. The resulting numerical dimensions are shown in figure \ref{fig:aileron_sizing} in the Appendix and figure \ref{fig:aileron_sizing_plot} below, as well as being taulated in table \ref{tab:aileron_size_table}. The aileron maintains a constant chord ratio ($c_a/c_w$) throughout.
+
+\begin{table}[H]
+\centering
+\caption{Aileron dimensions}
+\begin{tabular}{|c|c|c|c|}\hline
+    $c_a/c_w$ & $\eta_{a_i}$ & $\eta_{a_o}$ & $S_a/S_w$ \\ \hline
+    25.0\%    & 60.0\%     & 98.0\%     & 0.039     \\ \hline
+\end{tabular}
+\label{tab:aileron_size_table}
+\end{table}
+
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{Report3Printouts/Wing_and_Aileron/aileron_sizing_plot.png}
+    \caption{Aileron layout}
+    \label{fig:aileron_sizing_plot}
+\end{figure}
+
 \subsection{Sizing the Longitudinal Control Surfaces}
 %Include AAA printout of elevator and/or canardvator calculations in the appendix and a drawing of the tail/elevator and/or canard/canardvator in the chapter itself
 %Include ce/ch, eta eo dimensions (and/or ccv/cc, eta cvi, and eta cvo dimensions). Include (Se/Sh), and/or (Scv/Sc) calcuated from your AAA values and compare them with similar aircraft. Comment - based on your values, do you expect problems with sufficient pitch authority?
@@ -443,33 +479,22 @@ Like the horizontal stabilizer, vertical stabilizer sizing and placement was dri
 \end{figure}
 
 \begin{figure}[H]
-    \includegraphics[width=\textwidth]{Report3Printouts/Empannage/Horizontal_geometry_plot.png}
-    \caption{Horizontal stabilizer layout}
-    \label{fig:horizontal_geometry_plot}
-\end{figure}
-
-\begin{figure}[H]
     \includegraphics[width=\textwidth]{Report3Printouts/Empannage/Horizontal_volumeratio_cropped.png}
     \caption{Horizontal tail volume coefficient calculations}
     \label{fig:horizontal_volumeratio}
 \end{figure}
 
-\begin{figure}[H]
-    \includegraphics[width=\textwidth]{Report3Printouts/Empannage/Horizontal_volumeratio_plot.png}
-    \caption{Horizontal stabilizer with aerodynamic center shown}
-    \label{fig:horizontal_volumeratio_plot}
-\end{figure}
+% TODO; Same image as another above? Maybe I overwrote the correct one?
+% \begin{figure}[H]
+%     \includegraphics[width=\textwidth]{Report3Printouts/Empannage/Horizontal_volumeratio_plot.png}
+%     \caption{Horizontal stabilizer with aerodynamic center shown}
+%     \label{fig:horizontal_volumeratio_plot}
+% \end{figure}
 
 \begin{figure}[H]
     \includegraphics[width=\textwidth]{Report3Printouts/Empannage/Vertical_geometry_cropped.png}
     \caption{Vertical stabilizer sizing}
     \label{fig:vertical_geometry}
-\end{figure}
-
-\begin{figure}[H]
-    \includegraphics[width=\textwidth]{Report3Printouts/Empannage/Vertical_geometry_plot.png}
-    \caption{Vertical stabilizer layout}
-    \label{fig:vertical_geometry_plot}
 \end{figure}
 
 \begin{figure}[H]
@@ -482,6 +507,12 @@ Like the horizontal stabilizer, vertical stabilizer sizing and placement was dri
     \includegraphics[width=\textwidth]{Report3Printouts/Empannage/Vertical_volumeratio_plot.png}
     \caption{Vertical stabilizer with aerodynamic center shown}
     \label{fig:vertical_volumeratio_plot}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{Report3Printouts/Wing_and_Aileron/aileron_sizing.png}
+    \caption{Aileron layout}
+    \label{fig:aileron_sizing}
 \end{figure}
 
 \subsection{AAA: Control Surface Layout Design}
