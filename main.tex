@@ -80,7 +80,13 @@ $\Gamma_W$	               & Dihedral                           \\
 %Define/show axis system
 
 % Explain the empty weight breakdown of your aircraft, including individual 
-\begin{table}
+%adjusting weight groups
+From the Gerren equation (Pres 18), the propellers have a diameter of 9.25 ft. From AAA figure \ref{fig:propellerweight}, these propellers will weigh about 1800 lbs. With 3000 lbs of engine total and about 700 lbs of extra power plant weight (reduced due to electronic actuators), total powerplant weight is about 5500 lbs. The initial weight breakdown gave 4655.1 lbs for powerplant, so some extra weight for the engines had to be found by downsizing other components.
+
+%Empty weight breakdown
+Nose gear was 15\% of the gear weight with the main gear taking the remaining weight. Vertical tail weight was assumed to be 3/8 of allotted tail weight to conform to DHC-6 proportions.
+
+\begin{table}[H]
 \label{tab:Empty Weight}
 \caption{Empty weight breakdown of the Sea Lion.}
 \begin{tabular}{|c|c|c|c|c|c|c|}\hline
@@ -89,16 +95,18 @@ Fuselage & Wing & Empennage & Landing Gear & Nacelle & Powerplant & Fixed Equipm
 \end{tabular}
 \end{table}
 % tables with structural, powerplant, and fixed equipment weight breakdowns 
-\begin{table}
+\begin{table}[H]
 \label{tab:Structural Weight}
 \caption{Structural weight breakdown.}
-\begin{tabular}{|c|c|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|c|}\hline
 Wing & Fuselage & Horizontal Tail & Vertical Tail & Nose Gear & Main Gear \\ \hline
 3386.2 & 4455.6 & 445.6 & 267.3 & 245.9 & 1399.7 \\ \hline
 \end{tabular}
 \end{table}
 
-\begin{table}
+Power plant weight was determined by dividing the allowed weight in two and subtracting the 901.8 allotted for each side of propeller.
+
+\begin{table}[H]
 \label{tab:Powerplant Weight}
 \caption{Powerplant weight breakdown.}
 \begin{tabular}{|c|c|c|c|}
@@ -107,7 +115,9 @@ Engine 1 & Engine 2 & Propeller 1 & Propeller 2 \\ \hline
 \end{tabular}
 \end{table}
 
-\begin{table}
+$W_{lav} = 3.9(10^{1.33})=83.38$lbs. Xcg of lavatory is 499.5 inches. Ycg is 23.5 in. Zcg is 50.5 in.
+
+\begin{table}[H]
 \label{tab:Fixed Equipment Weight}
 \caption{Fixed equipment $c_g$}
 \begin{tabular}{|c|c|}\hline
@@ -115,8 +125,18 @@ Lavatory & Other \\ \hline
 83.4 & 5192.0 \\ \hline
 \end{tabular}
 \end{table}
-% and the x-,y-, and z-cg locations of the various weight components. You can 
-\begin{table}
+% and the x-,y-, and z-cg locations of the various weight components. You can
+
+190 inches first guess for wing apex.2 feet for distance from bottom.
+
+Fuselage .45 of length.
+
+The tire is 9 inches wide so the z direction offset will be 4.5 inches.
+
+The nose gear tire is 6.5 inches wide
+
+
+\begin{table}[H]
 \label{tab:Structural cg}
 \caption{Structural $c_g$ breakdown.}
 \begin{tabular}{|c|c|c|c|}
@@ -130,7 +150,10 @@ Main Gear & 30 & 0 & 2.38\\ \hline
 \end{tabular}
 \end{table}
 
-\begin{table}
+
+7.9 foot long engines suggest about 10 foot long nacelles. This give 4.8 feet behind the 
+
+\begin{table}[H]
 \label{tab:Powerplant cg}
 \caption{Powerplant $c_g$ breakdown.}
 \begin{tabular}{|c|c|c|c|}\hline
@@ -141,7 +164,7 @@ Propeller 2 & 20 & -9 & 3\\ \hline
 \end{tabular}
 \end{table}
 
-\begin{table}
+\begin{table}[H]
 \label{tab:Fixed equipment cg}
 \caption{Fixed equipment $c_g$ breakdown.}
 \begin{tabular}{|c|c|c|c|}\hline
@@ -151,8 +174,6 @@ Other & 21.41 & 0 & 3.5\\ \hline
 \end{tabular}
 \end{table}
 
-% appendix Since the engine weigh 1500 lbs each and our initial weight budget 
-% for power plant was 4655.1 lbs, some extra weight for the engines had to be 
 % found.
 % Explain if you adjusted any weights calculated from the weight fraction 
 % table (like the powerplant weight) Give calculations for your lavatory 
@@ -160,23 +181,6 @@ Other & 21.41 & 0 & 3.5\\ \hline
 % conference tables. Discuss the general method of how you determined component 
 % cg locations and how you divided up calculated weights (like tail and gear weights).
 
-From the gerren equation (Pres 18), the propellers have a diameter of 9.25 ft. From AAA, these propellers will weigh about 1800 lbs. With 3000 lbs of engine and about 700 lbs of extra power plant weight (reduced due to electronic actuators).
-
-Power plant weight was determined by dividing the allowed weight in two and subtracting the 901.8 allotted for each side of propeller.
-
-Nose gear was 15\% of the gear weight with the main gear taking the remaining weight. Vertical tail weight was assumed to be 3/8 of allotted tail weight to conform to DHC-6 proportions.
-
-$W_{lav} = 3.9(10^{1.33})=83.38$lbs. Xcg of lavatory is 499.5 inches. Ycg is 23.5 in. Zcg is 50.5 in.
-
-190 inches first guess for wing apex.2 feet for distance from bottom.
-
-Fuselage .45 of length.
-
-7.9 foot long engines suggest about 10 foot long nacelles. This give 4.8 feet behind the 
-
-The tire is 9 inches wide so the z direction offset will be 4.5 inches.
-
-The nose gear tire is 6.5 inches wide
 
 %If you are storing fuel in the fuselage, include a drawing of your fuel tank, including its estimated cg point. Don't forget to include its location in the fuselage for weight and balance calculations
 
