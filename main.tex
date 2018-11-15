@@ -223,16 +223,21 @@ The most forward cg is 23.67 ft
 This group selected a conventional tail layout in the interest of simplicity and separation of concerns. The tail and empennage serves only aerodynamic stability and control, so no special features were required.
 
 \subsection{Sizing the Horizontal Stabilizer} %AND/OR canard
-%Discuss the location and design of the horizontal stabilizer and/or the canard. Need to include: S, b, AR, Gamma c/4, Lambda, lambda, t/c, and airfoil selected for the horizontal tail and/or canard. Calculate and compare values of Vh and/or Vc to those of similar aircraft
-%Include AAA printouts of volume coefficient calculations in the appendix and a drawing of the horizontal stabilizer and/or canard in the chapter itself
-%Perform a critical Mach number check for each, if applicable. Mcr plots are found in Canvas. Show where your point lies on the plot
+% Discuss the location and design of the horizontal stabilizer and/or the canard. 
+% Need to include: S, b, AR, Gamma c/4, Lambda, lambda, t/c, and airfoil selected 
+% for the horizontal tail and/or canard. Calculate and compare values of Vh and/or Vc 
+% to those of similar aircraft Include AAA printouts of volume coefficient calculations 
+% in the appendix and a drawing of the horizontal stabilizer and/or canard in the 
+% chapter itself. Perform a critical Mach number check for each, if applicable. Mcr plots 
+% are found in Canvas. Show where your point lies on the plot
 
 The horizontal stabilizer was designed principally for ensuring that the 
 horizontal tail volume coefficient, $V_h$, lay between 0.7 and 1.1, as seen 
 in \cite{orange_book}, as well as keeping the static margin, fuselage length, 
 and horizontal tail area to reasonable limits. This effort was only a 
 partial success, as while $V_h$ was eventually tuned to be around 0.8, a 
-suitable static margin has not yet been found. 
+suitable static margin has not yet been found. Currently, it lies around 44.7\%,
+whereas it should be at most 15\%.
 
 The surface area of the horizontal tail is 190 square feet with an apect 
 ratio of 7. It is 36.47 feet in span, with a taper ratio, $\lambda$, of 1. 
@@ -257,9 +262,9 @@ $c_{r_h} = c_{t_h}$.
 \begin{table}[H]
 \centering
 \caption{Horizontal stabilizer dimensions}
-\begin{tabular}{|c|c|c|c|c|c|c|c|}\hline
-    $AR_h$ & $S_h$ $[ft^2]$ & $b_h$ $[ft]$ & $\lambda_h$ & $\Lambda_{c/4_h}$ $[deg]$ & $X_{apex_h}$ $[ft]$ & $\bar{c}_h$ $[ft]$ & $V_h$  \\ \hline
-    7.0 & 190.0 & 36.47 & 1.0 & 0.0 & 61.30 & 5.21 & 0.8104 \\ \hline
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}\hline
+    $AR_h$ & $S_h$ $[ft^2]$ & $b_h$ $[ft]$ & $\Gamma_{c/4}$ $[deg]$ & $\lambda_h$ & $\Lambda_{c/4_h}$ $[deg]$ & $X_{apex_h}$ $[ft]$ & $\bar{c}_h$ $[ft]$ & $V_h$  \\ \hline
+    7.0 & 190.0 & 36.47 & 0 & 1.0 & 0.0 & 61.30 & 5.21 & 0.8104 \\ \hline
 \end{tabular}
 \label{tab:horizontal_stabilizer_size}
 \end{table}
@@ -285,7 +290,7 @@ $c_{r_h} = c_{t_h}$.
 % made to either the CG (due to weight and balance) and/or the AC (due to 
 % wing/tail location), now is the time to make changes.
 
-Like the horizontal stabilizer, vertical stabilizer sizing and placement was driven primarily by the vertical tail volume ratio, $V_v$. In table 8.6b of \cite{orange_book}, all the volume ratios are between 0.065 and 0.120. A volume ratio of 0.0774 was eventually settled on, with the rest of the paramters in table \ref{tab:vertical_stabilizer_size} balanced between placement on the aircraft and control surface size. These results are from figures \ref{fig:vertical_geometry} and \ref{fig:vertical_volumeratio}.
+Like the horizontal stabilizer, vertical stabilizer sizing and placement was driven primarily by the vertical tail volume ratio, $V_v$. In table 8.6b of \cite{orange_book}, all the volume ratios are between 0.065 and 0.120. A volume ratio of 0.0774 was eventually settled on, with the rest of the paramters in table \ref{tab:vertical_stabilizer_size} balanced between placement on the aircraft and control surface size. These results are from figures \ref{fig:vertical_geometry} and \ref{fig:vertical_volumeratio}. Like the horizontal stabilizer, the vertical stabilizer uses a NACA 0012 airfoil.
 
 \begin{table}[H]
 \centering
@@ -350,12 +355,64 @@ Of these aircraft, only the DHC-6 has larger control surfaces. This makes sense 
 \end{figure}
 
 \subsection{Sizing the Longitudinal Control Surfaces}
-%Include AAA printout of elevator and/or canardvator calculations in the appendix and a drawing of the tail/elevator and/or canard/canardvator in the chapter itself
-%Include ce/ch, eta eo dimensions (and/or ccv/cc, eta cvi, and eta cvo dimensions). Include (Se/Sh), and/or (Scv/Sc) calcuated from your AAA values and compare them with similar aircraft. Comment - based on your values, do you expect problems with sufficient pitch authority?
-%If you have a movable stabilizer with no elevator and/or a movable canard with no canardvator, state and discuss that in this section
+% Include AAA printout of elevator and/or canardvator calculations in the appendix 
+% and a drawing of the tail/elevator and/or canard/canardvator in the chapter itself
+% Include ce/ch, eta eo dimensions (and/or ccv/cc, eta cvi, and eta cvo dimensions). 
+% Include (Se/Sh), and/or (Scv/Sc) calcuated from your AAA values and compare them with 
+% similar aircraft. Comment - based on your values, do you expect problems with 
+% sufficient pitch authority?
+% If you have a movable stabilizer with no elevator and/or a movable canard with no 
+% canardvator, state and discuss that in this section
+
+As seen in figure \ref{fig:horizontal_elevator}, Elevator design was kept as simple as possible. $C_e/C_h$ was kept at 30\% for the entire length of the elevator, which runs from 5\% to 95\% of the horizontal stabilizer half span. The elevator area, $S_e$, is 48.74 square feet of the 190 square feet of the entire horizontal stabilizer, $S_h$.
+
+\begin{table}[H]
+\centering
+\caption{Elevator dimensions}
+\begin{tabular}{|c|c|c|c|}\hline
+    $c_e/c_h$ & $\eta_{e_i}$ & $\eta_{e_o}$ & $S_e/S_h$ \\ \hline
+    30.0\%    & 5\%          & 95.0\%       & 0.256     \\ \hline
+\end{tabular}
+\label{tab:elevator_size_table}
+\end{table}
+
+Based on the substantial control surfaces, a properly balanced aircraft would 
+be easily controllable with this tail configuration. Because the Twin Sea Lion has 
+such a large static margin, this elevator may still be undersized. In either case, 
+the area ratios and chord ratios of the elevator and horizontal stabilizer are in 
+the range of values noted in \cite{orange_book}, which range between 0.28 and 1 for $S_e/S_h$ and 0.29 to 0.50 for $c_e/c_h$.
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{Report3Printouts/Empannage/Horizontal_elevator_plot.png}
+    \caption{Elevator layout on the Twin Sea Lion}
+    \label{fig:horizontal_elevator_plot}
+\end{figure}
+
 \subsection{Sizing the Directional Control Surfaces}
-%Include AAA printout of rudder calculations in the appendix and a drawing of the tail/rudder in the chapter itself
-%Include cr/cv, eta ti and eta p0 dimensions. Include (Sr/Sv) calculated from your AAA values and compare it with similar aircraft. Comment - based on your values, do you expect problems with sufficient yaw authority?
+% Include AAA printout of rudder calculations in the appendix and a drawing of 
+% the tail/rudder in the chapter itself. Include cr/cv, eta ri and eta r0 dimensions. 
+% Include (Sr/Sv) calculated from your AAA values and compare it with similar aircraft. 
+% Comment - based on your values, do you expect problems with sufficient yaw authority?
+
+The rudder was sized according to figure \ref{fig:vertical_rudder}. Its dimensions are very similar to those of the elevators. The geometry is summarized in table \ref{tab:rudder_size_table} below. The total rudder area, $S_r$, is 35.14 square feet, making $S_r/S_v = 0.256$. Looking at \cite{orange_book} again, most reigonal turboprop aircraft have rudders between 0.26 and 0.41 of the total vertical surface area. This means that some issues with rudder authority might appear. This could be a limiting factor on the crosswind capabilities and spin recovery of the Twin Sea Lion.
+
+\begin{table}[H]
+\centering
+\caption{Rudder dimensions}
+\begin{tabular}{|c|c|c|c|}\hline
+    $c_r/c_v$ & $\eta_{r_i}$ & $\eta_{r_o}$ & $S_r/S_v$ \\ \hline
+    30.0\%    & 5\%          & 95.0\%       & 0.256     \\ \hline
+\end{tabular}
+\label{tab:rudder_size_table}
+\end{table}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{Report3Printouts/Empannage/Vertical_rudder_plot.png}
+    \caption{Rudder control surface layout}
+    \label{fig:vertical_rudder_plot}
+\end{figure}
+
+
 
 \section{Landing Gear Layout Design}
 \subsection{Sizing of the Landing Gear}
@@ -557,13 +614,6 @@ ge Brochure.pdf}
     \label{fig:horizontal_volumeratio}
 \end{figure}
 
-% TODO; Same image as another above? Maybe I overwrote the correct one?
-% \begin{figure}[H]
-%     \includegraphics[width=\textwidth]{Report3Printouts/Empannage/Horizontal_volumeratio_plot.png}
-%     \caption{Horizontal stabilizer with aerodynamic center shown}
-%     \label{fig:horizontal_volumeratio_plot}
-% \end{figure}
-
 \begin{figure}[H]
     \includegraphics[width=\textwidth]{Report3Printouts/Empannage/Vertical_geometry_cropped.png}
     \caption{Vertical stabilizer sizing}
@@ -596,23 +646,10 @@ ge Brochure.pdf}
 \end{figure}
 
 \begin{figure}[H]
-    \includegraphics[width=\textwidth]{Report3Printouts/Empannage/Horizontal_elevator_plot.png}
-    \caption{Elevator and horizontal stabilizer layout}
-    \label{fig:horizontal_elevator_plot}
-\end{figure}
-
-\begin{figure}[H]
     \includegraphics[width=\textwidth]{Report3Printouts/Empannage/Vertical_rudder_cropped.png}
     \caption{Rudder sizing}
     \label{fig:vertical_rudder}
 \end{figure}
-
-\begin{figure}[H]
-    \includegraphics[width=\textwidth]{Report3Printouts/Empannage/Vertical_rudder_plot.png}
-    \caption{Rudder control surface layout}
-    \label{fig:vertical_rudder_plot}
-\end{figure}
-
 
 \subsection{AAA: Stability Derivatives}
 
