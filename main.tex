@@ -326,10 +326,26 @@ The aileron was sized to take up the remaining room on the wing, given the pract
 \label{tab:aileron_size_table}
 \end{table}
 
+Given an aileron area, $S_a$ of 32.29 square feet from figure \ref{fig:aileron_sizing}, $S_a/S_w$ is calculated to be 0.039. Comparing this to other, similar aircraft is very difficult because aileron dimensions are not readily available online. Instead, three-views of three of the simlar aircraft were found and the alileron span dimensions were calculated and are shown in table \ref{tab:similar_ailerons below}. For each of the aircraft where a good three-view drawing could be found, the aileron dimension caluculations were performed by measuring the distance between the wingtip and aircraft centerline in pixels, as well as the distance from the centerline to the inside and outside of the aileron. $\eta_{a_i}$ would then be the distance from the centerline to the inboard side of the aileron divised by the half span.
+
+\begin{table}[H]
+\centering
+\caption{Aileron spans of similar aircraft}
+\begin{tabular}{|c|c|c|c|}\hline
+    Aircraft & $\eta_{a_i}$ & $\eta_{a_o}$ \\ \hline
+    DHC-4 & 67.0\%          & 96.0\%        \\ \hline
+    DHC-6 & 44.0\%          & 95.6\%        \\ \hline
+    F-27  & 70.7\%          & 98.5\%        \\ \hline
+\end{tabular}
+\label{tab:similar_ailerons}
+\end{table}
+
+Of these aircraft, only the DHC-6 has larger control surfaces. This makes sense because it is a bush plane which needs very good roll authority at low speed. While such large control surfaces are admirable, their necessitiy is not proven in the case of the Twin Sea Lion. The aircraft's wingspan both give the ailerons a comparitively large moment arm for roll authority and limit the number of airstrips where nimble roll control might be required.
+
 
 \begin{figure}[H]
     \includegraphics[width=\textwidth]{Report3Printouts/Wing_and_Aileron/aileron_sizing_plot.png}
-    \caption{Aileron layout}
+    \caption{Aileron layout on the Twin Sea Lion}
     \label{fig:aileron_sizing_plot}
 \end{figure}
 
@@ -373,6 +389,45 @@ The aileron was sized to take up the remaining room on the wing, given the pract
 \bibitem{pres13} Gerren, "Presentation 13", \url{https://canvas.colorado.edu}
 
 \bibitem{orange_book} Gerren, "Tail and Control Surface Info", \url{https://canvas.colorado.edu}
+
+% Twin Otter: https://www.vikingair.com/sites/default/files/documents/Twin%20Otter%20Series%204
+00%20Multi-Page%20Brochure.pdf
+\bibitem{dhc-6} Twin Otter Series 400. Viking Air, 
+    \url{https://www.vikingair.com/sites/default/files/documents/Twin Otter Series 400 Multi-Pa
+ge Brochure.pdf}
+
+% PC-24: https://www.pilatus-aircraft.com/en/fly/pc-24 | Weight from Wikipedia
+% https://www.pilatus-aircraft.com/data/document/Pilatus-Aircraft-Ltd-PC-24-Factsheet.pdf
+\bibitem{pc24Wto} PC-24 The Super Versatile Jet. Pilatus, 
+        \url{http://www.pilatus-aircraft.com/data/document/Pilatus-Aircraft-Ltd-PC-24-Factsheet
+.pdf}
+%empty weight: https://www.militaryfactory.com/aircraft/detail.asp?aircraft_id=1256#specs
+\bibitem{pc24We} "Pilatus PC-24 Light Passenger Jet Aircraft - Switzerland." Military Weapons, 
+    \url{http://www.militaryfactory.com/aircraft/detail.asp?aircraft_id=1256#specs}
+
+% DHC-4: http://www.dhc4and5.org/caribou_manuals.htm
+\bibitem{dhc-4} "C-7A Flight Manual Performance Data." Wayne E. Buser, 
+    \url{http://www.dhc4and5.org/caribou_manuals.htm}
+
+% F-27: https://www.planeandpilotmag.com/article/fairchild-hiller-fh-227-fokker/
+\bibitem{F-27} "FAIRCHILD HILLER FH-227 (FOKKER)" Plane and Pilot Magazine, 
+    \url{https://www.planeandpilotmag.com/article/fairchild-hiller-fh-227-fokker/}
+
+% Q-400: https://www.airliners.net/aircraft-data/de-havilland-canada-dhc-8-400-dash-8/122
+\bibitem{Q400} "De Havilland Canada DHC-8-400 Dash 8." Airliners.net, 
+    \url{http://www.airliners.net/aircraft-data/de-havilland-canada-dhc-8-400-dash-8/122}
+
+% http://www.flugzeuginfo.net/acdata_php/acdata_f27_en.php
+\bibitem{F-27-length} "Fokker F27 Friendship" Flugzeuginfo Info,
+    \url{http://www.flugzeuginfo.net/acdata_php/acdata_f27_en.php}
+
+% Three Views
+\bibitemp{dh4_threeview} "DHC-4 Three View"
+    \url{http://www.wallaby03.com/wp-content/uploads/2009/12/DHC-4A-specs.jpg}
+\bibitemp{dh6_threeview} "DHC-6 Three View"
+    \url{http://aviadejavu.ru/Images6/AN/AN82-11/27-3.jpg}
+\bibitemp{f27_threeview} "F-27 Three View"
+    \url{https://www.the-blueprints.com/blueprints-depot-restricted/modernplanes/fairchild/fairchild_f_27a-53997.jpg}
 
 \end{thebibliography}
 
