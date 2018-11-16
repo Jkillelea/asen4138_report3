@@ -1,12 +1,6 @@
 % -------------------------------
 % == REPORT 3 ==
 % -------------------------------
-% -------------------------------
-% Madison: Odd numbered sections
-% Jake: Even numbered sections
-% -------------------------------
-% -------------------------------
-%
 
 \documentclass[conf]{new-aiaa}
 
@@ -52,20 +46,43 @@
 {\renewcommand\arraystretch{1.0}
 \noindent\begin{longtable*}{@{}l @{\quad=\quad} l@{}}
 $AAA$     	               & Advanced Aircraft Analysis Program \\
-$AR_W$    	               & Aspect Ratio                       \\
-$b_W$	  	               & Wing Span                          \\
+$AR_W$    	               & Wing Aspect Ratio          \\
+$b_W$	  	               & Wing Span                  \\
+$b_h$	  	               & Horizontal Stabilizer Span \\
+$b_v$	  	               & Verctial Stabilizer Span   \\
+$b_e$	  	               & Elevator Span   \\
+$b_r$	  	               & Rudder Span   \\
 $\bar{c}_W$	  	           & Mean Geometric Chord               \\
+$CG$	  	               & Center of Gravity \\
+$ft$	  	               & Feet \\
 $i_W$		               & Incidence Angle                    \\
 KTAS                       & Knots True Airspeed                \\
 $l_f$     	               & Length of fuselage                 \\
-$MSL$     	               & Mean Sea Level Altitude            \\
-$S_W$     	               & Wing Area                          \\
-$TWR$     	               & Thrust to weight ratio             \\
 $\epsilon_W$               & Wing Twist Angle                   \\
+$\eta_{a_i}$               & Aileron Inboard Station as Fraction of Half-Span \\
+$\eta_{a_0}$               & Aileron Outboard Station as Fraction of Half-Span \\
 $\Lambda_{c/4w}$[$^\circ$] & Wing Sweep Angle                   \\
-$\lambda_W$	               & Taper Ratio                        \\
+$\lambda_W$	               & Wing Taper Ratio                        \\
+$\lambda_h$	               & Horizontal Stabilizer Taper Ratio                        \\
+$\lambda_v$	               & Vertical Stabilizer Taper Ratio                        \\
 $\lambda_{c/4w}$           & Quarter-chord Sweep Angle          \\
+$lbs$                      & Pounds Mass \\
+$M$                        & Mach Number \\
+$MSL$     	               & Mean Sea Level Altitude            \\
+$NACA$                     & National Advisory Committe for Aeronautics \\
+$S_W$     	               & Wing Area                          \\
+$S_h$     	               & Horizontal Stabilizer Area \\
+$S_v$     	               & Vertical Stabilizer Area  \\
+$S_e$     	               & Elevator Area  \\
+$S_r$     	               & Rudder Area  \\
+$TWR$     	               & Thrust to Weight Ratio             \\
+$V_h$     	               & Horizontal Tail Volume Ratio \\
+$V_v$     	               & Vertical Tail Volume Ratio \\
 $\Gamma_W$	               & Dihedral                           \\
+$W_{lav}$	               & Lavatory Weight                           \\
+$x_{cg}$	               & X Location of the Center of Gravity \\
+$y_{cg}$	               & Y Location of the Center of Gravity \\
+$z_{cg}$	               & Z Location of the Center of Gravity \\
 \end{longtable*}}
 
 \newpage
@@ -284,7 +301,7 @@ symmetrical aerodynamic properties which allow it to be used for both
 horizontal and vertical control surfaces.
 
 By inspecting figure \ref{fig:critical_mach_check}, the cruise speed of 
-$M-0.6$ is too low for any shock formation. If cruise speed was higher, 
+$M=0.6$ is too low for any shock formation. If cruise speed was higher, 
 then a thinner control surface airfoil might be required. However, in this 
 case the thickness of the horizontal stabilizer could safely be increased to 
 just about any reasonable amount without worrying about the formation of shocks.
