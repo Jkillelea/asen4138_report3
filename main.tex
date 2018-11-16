@@ -54,22 +54,30 @@ $b_e$	  	               & Elevator Span   \\
 $b_r$	  	               & Rudder Span   \\
 $\bar{c}_W$	  	           & Mean Geometric Chord               \\
 $CG$	  	               & Center of Gravity \\
+$c_h$	  	               & Horizontal Stabilizer Chord \\
+$c_v$	  	               & Vertical Stabilizer Chord \\
+$c_a$	  	               & Aileron Chord \\
+$c_e$	  	               & Elevator Chord \\
+$c_r$	  	               & Rudder Chord \\
 $ft$	  	               & Feet \\
-$i_W$		               & Incidence Angle                    \\
-KTAS                       & Knots True Airspeed                \\
-$l_f$     	               & Length of fuselage                 \\
-$\epsilon_W$               & Wing Twist Angle                   \\
+% $i_W$		               & Incidence Angle                    \\
+% $l_f$     	               & Length of fuselage                 \\
+% $\epsilon_W$               & Wing Twist Angle                   \\
 $\eta_{a_i}$               & Aileron Inboard Station as Fraction of Half-Span \\
-$\eta_{a_0}$               & Aileron Outboard Station as Fraction of Half-Span \\
-$\Lambda_{c/4w}$[$^\circ$] & Wing Sweep Angle                   \\
+$\eta_{a_o}$               & Aileron Outboard Station as Fraction of Half-Span \\
+$\eta_{e_i}$               & Elevator Inboard Station as Fraction of Half-Span \\
+$\eta_{e_o}$               & Elevator Outboard Station as Fraction of Half-Span \\
+$K_{lav}$                  & Lavatory Sizing Coefficient \\
+$\Lambda_{c/4w}$           & Wing Sweep Angle                   \\
 $\lambda_W$	               & Wing Taper Ratio                        \\
 $\lambda_h$	               & Horizontal Stabilizer Taper Ratio                        \\
 $\lambda_v$	               & Vertical Stabilizer Taper Ratio                        \\
 $\lambda_{c/4w}$           & Quarter-chord Sweep Angle          \\
 $lbs$                      & Pounds Mass \\
 $M$                        & Mach Number \\
-$MSL$     	               & Mean Sea Level Altitude            \\
+% $MSL$     	               & Mean Sea Level Altitude            \\
 $NACA$                     & National Advisory Committe for Aeronautics \\
+$N_{pax}$                  & Number of Pasengers \\
 $S_W$     	               & Wing Area                          \\
 $S_h$     	               & Horizontal Stabilizer Area \\
 $S_v$     	               & Vertical Stabilizer Area  \\
@@ -172,7 +180,7 @@ With the wing apex at 21 feet, the $x_{cg}$ was places two feet behind the apex.
 
 Fuselage $x_{cg}$ was approximated at 0.45 of length\cite{pres19} to be $0.45\cdot47.58=21.41$ ft.
 
-Approximate landing gear dimensions from table 9.1 of the landing gear technical documentation\citet{orange_book} give a main gear tire width of 9 inches and a nose gear tire diameter of 23.4 inches. The z direction offset will be 4.5 inches for the main gear and 11.7 inches for the nose gear. These correspond to 0.98 ft in the z direction for the nose gear and $2+\frac{4.5}{12}=2.38$ ft for the main gear.
+Approximate landing gear dimensions from table 9.1 of the landing gear technical documentation \cite{orange_book} gives a main gear tire width of 9 inches and a nose gear tire diameter of 23.4 inches. The z direction offset will be 4.5 inches for the main gear and 11.7 inches for the nose gear. These correspond to 0.98 ft in the z direction for the nose gear and $2+\frac{4.5}{12}=2.38$ ft for the main gear.
 
 All structural components are symmetric about the y axis.
 \begin{table}[H]
@@ -180,13 +188,13 @@ All structural components are symmetric about the y axis.
 \label{tab:Structural cg}
 \caption{Structural $c_g$ breakdown.}
 \begin{tabular}{|c|c|c|c|}\hline
-	& $x_{cg}$ [ft] & $y_{cg}$ [ft] & $z_{cg}$ [ft] \\ \hline
-Wing & 23 & 0 & 2\\ \hline
-Fuselage & 21.41 & 0 & 3.5\\ \hline
-Horizontal Tail & 62 & 0 & 6\\ \hline
-Vertical Tail & 62	& 0 & 16\\ \hline
-Nose Gear & 8 & 0 & 0.98\\ \hline
-Main Gear & 30 & 0 & 2.38\\ \hline 
+	             & $x_{cg}$ [ft] & $y_{cg}$ [ft] & $z_{cg}$ [ft] \\ \hline
+Wing             & 23            & 0             & 2             \\ \hline
+Fuselage         & 21.41         & 0             & 3.5           \\ \hline
+Horizontal Tail  & 62            & 0             & 6             \\ \hline
+Vertical Tail    & 62            & 0             & 16            \\ \hline
+Nose Gear        & 8             & 0             & 0.98          \\ \hline
+Main Gear        & 30            & 0             & 2.38          \\ \hline 
 \end{tabular}
 \end{table}
 
@@ -417,7 +425,7 @@ Of these aircraft, only the DHC-6 has larger control surfaces. This makes sense 
 % If you have a movable stabilizer with no elevator and/or a movable canard with no 
 % canardvator, state and discuss that in this section
 
-As seen in figure \ref{fig:horizontal_elevator}, Elevator design was kept as simple as possible. $C_e/C_h$ was kept at 30\% for the entire length of the elevator, which runs from 5\% to 95\% of the horizontal stabilizer half span. The elevator area, $S_e$, is 48.74 square feet of the 190 square feet of the entire horizontal stabilizer, $S_h$.
+As seen in figure \ref{fig:horizontal_elevator}, elevator design was kept as simple as possible. $c_e/c_h$ was kept at 30\% for the entire length of the elevator, which runs from 5\% to 95\% of the horizontal stabilizer half span. The elevator area, $S_e$, is 48.74 square feet of the 190 square feet of the entire horizontal stabilizer, $S_h$.
 
 \begin{table}[H]
 \centering
@@ -466,7 +474,6 @@ The rudder was sized according to figure \ref{fig:vertical_rudder}. Its dimensio
 \end{figure}
 
 
-
 %\section{Landing Gear Layout Design}
 %\subsection{Sizing of the Landing Gear}
 %Describe how you chose the landing gear configuration (tricycle, taildragger, etc) for your aircraft and why.
@@ -489,12 +496,11 @@ The rudder was sized according to figure \ref{fig:vertical_rudder}. Its dimensio
 
 \section{Conclusions and Recommendations}
 \subsection{Conclusions}
+The Twin Sea Lion has had a full weight analysis and breakdown, and the aircraft is balanced and expected to be controllable. However, the static margin is still very high at around 44\%. Of the aircraft elements, propellers wound up weighing an unexpected amount, bringing total 
 
 \subsection{Recommendations}
 
 \begin{thebibliography}{99}
-
-% Todo: orange book charts for Vh and Vv
 
 \bibitem{pres18} Gerren, "Presentation 18", \url{https://canvas.colorado.edu}
 
